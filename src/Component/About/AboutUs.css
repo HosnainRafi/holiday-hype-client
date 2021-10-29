@@ -1,0 +1,22 @@
+.title{
+    font-size: 50px;
+    font-weight: 800;
+    margin: 30px auto 100px;
+}
+.general-info{
+    background-image: url();
+    background-repeat: no-repeat;
+    background-size: 100%;
+    padding-top: 80px;
+    padding-bottom: 50px;
+    margin-bottom: 50px;
+}
+.about-title{
+    color: #0176d5;
+    font-size: 50px;
+    font-weight: 700;
+    
+}
+.container-fluid{
+    margin-bottom: 100px;
+}
