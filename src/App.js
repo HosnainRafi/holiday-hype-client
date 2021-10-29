@@ -13,6 +13,7 @@ import MyOrder from './Component/MyOrders/MyOrder';
 import ManageOrder from './Component/ManageAllOrder/ManageOrder';
 import AddNewService from './Component/AddNewService/AddNewService';
 import PrivateRoute from './Component/Login/PrivateRoute/PrivateRoute';
+import Order from './Order/Order';
 
 function App() {
   return (
@@ -32,6 +33,9 @@ function App() {
           <Route path='/about'>
             <AboutUs></AboutUs>
           </Route>
+          <PrivateRoute path ="/booking/:serviceId">
+            <Order></Order>
+          </PrivateRoute>
           <PrivateRoute path='/myOrders'>
             <MyOrder></MyOrder>
           </PrivateRoute>

@@ -1,8 +1,10 @@
 import React from 'react';
 import { useForm } from 'react-hook-form';
 import swal from 'sweetalert';
+import { useHistory} from 'react-router';
 
 const AddNewService = () => {
+    const history = useHistory()
 
     const { register, handleSubmit,reset } = useForm();
     const onSubmit = data => {
@@ -18,6 +20,7 @@ const AddNewService = () => {
             if (result.insertedId) {
                 swal("Congratulation!" ,"You have added the service", "success");
                 reset();
+                history.push('/home')
             }
         })
         
@@ -29,7 +32,7 @@ const AddNewService = () => {
                 <form onSubmit={handleSubmit(onSubmit)} className="d-flex justify-content-center align-items center flex-column w-50 text-center mx-auto">
                     <input className="mb-2" placeholder="Enter Title of the Place" {...register("title", { required: true, maxLength: 20 })} />
                     <input className="mb-2" placeholder="Enter the Description" {...register("description", { required: true, maxLength: 100 })} />
-                    <input className="mb-2" placeholder="Enter Course Image url" {...register("img", { required: true, maxLength: 100 })} />
+                    <input className="mb-2" placeholder="Enter Course Image url" {...register("image", { required: true, maxLength: 100 })} />
                     <input className="mb-2" type="number" placeholder="Enter the Price" {...register("price", { required: true})} />
                     <input className="btn btn-warning text-white" type="submit" />
                 </form>

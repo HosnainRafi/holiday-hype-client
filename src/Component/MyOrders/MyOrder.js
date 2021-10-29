@@ -1,9 +1,53 @@
 import React from 'react';
+import { useState, useEffect } from "react";
+import { Table } from 'react-bootstrap';
+import useAuth from '../../Hooks/useAuth';
+
 
 const MyOrder = () => {
+    const [events, setEvents] = useState([]);
+    const { user } = useAuth();
+
+    useEffect(() => {
+        fetch(`http://localhost:5000/myEvents/${user?.email}`)
+            .then(res => res.json())
+            .then(data => setEvents(data));
+    }, [user.email]);
+
+    console.log(events);
+
     return (
         <div>
-            <h2>Thu is my order</h2>
+            <h2>My Events</h2>
+
+            <Table striped bordered hover>
+                <thead>
+                    <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">Destination</th>
+                        <th scope="col">Name</th>
+                        <th scope="col">Email</th>
+                        <th scope="col">TravelDate</th>
+                        <th scope="col">Address</th>
+                    </tr>
+                </thead>
+                {
+                    events.map((event, index) => (
+                        <tbody>
+                            <tr>
+                                <td>{index + 1}</td>
+                                <td>{event?.destination}</td>
+                                <td>{event?.name}</td>
+                                <td>{event?.email}</td>
+                                <td>{event?.travelDate}</td>
+                                <td>{event?.address}</td>
+                                
+                            </tr>
+                        </tbody>
+                    ))
+                }
+
+            </Table>
         </div>
     );
 };

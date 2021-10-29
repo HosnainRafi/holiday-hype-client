@@ -47,6 +47,7 @@ const ContactUs = () => {
                 </div>
             </div>
             <div>
+                <h2 className="text-center bold" style={{color:"goldenrod"}}>Contact With Us</h2>
                 <div className="w-50 mt-4 mx-auto text-center">
                         <div class="form-floating mt-3 mb-2">
                             <input type="email" name="email" id="floatingInput" placeholder="name@example.com" class="form-control" />
@@ -58,7 +59,7 @@ const ContactUs = () => {
                             <label for="floatingName">Name</label>
                         </div>
                         <div>
-                            <textarea placeholder="Type Your Problem" name="instruction" id="" cols="30" rows="5"></textarea>
+                            <textarea placeholder="Type Your Problem" name="instruction" id="" cols="40" rows="4"></textarea>
                         </div>
                     <button class="w-25 btn btn-lg btn-primary mb-4" type="submit">Submit </button>
                 </div>
