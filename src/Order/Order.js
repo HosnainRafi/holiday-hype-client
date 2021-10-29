@@ -9,6 +9,7 @@ const Order = () => {
     const history = useHistory()
     const { user } = useAuth();
     const [service, setService] = useState({});
+    const [status,setStatus] =useState('pending')
     const { serviceId } = useParams();
 
     useEffect(() => {
@@ -21,6 +22,7 @@ const Order = () => {
 
     const onSubmit = (data) => {
         data.destination = service?.title;
+        data.status = status;
         fetch("http://localhost:5000/addEvent", {
             method: "POST",
             headers: { "content-type": "application/json" },
