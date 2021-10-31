@@ -1,4 +1,4 @@
-# Project Name: Meicare Center #
+# Project Name: Holiday Hype #
 [Live Website](https://holiday-hype.web.app/)
 
 <br/>
