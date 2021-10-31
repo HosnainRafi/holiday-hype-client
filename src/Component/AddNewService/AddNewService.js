@@ -9,7 +9,7 @@ const AddNewService = () => {
     const { register, handleSubmit,reset } = useForm();
     const onSubmit = data => {
         console.log(data);
-        fetch('http://localhost:5000/addServices', {
+        fetch('https://dry-lake-81295.herokuapp.com/addServices', {
             method: "POST",
             headers: { "content-type": "application/json" },
             body: JSON.stringify(data)

@@ -13,7 +13,7 @@ const Order = () => {
     const { serviceId } = useParams();
 
     useEffect(() => {
-        fetch(`http://localhost:5000/services/${serviceId}`)
+        fetch(`https://dry-lake-81295.herokuapp.com/services/${serviceId}`)
             .then(res => res.json())
             .then(data => setService(data))
     }, []);
@@ -23,7 +23,7 @@ const Order = () => {
     const onSubmit = (data) => {
         data.destination = service?.title;
         data.status = status;
-        fetch("http://localhost:5000/addEvent", {
+        fetch("https://dry-lake-81295.herokuapp.com/addEvent", {
             method: "POST",
             headers: { "content-type": "application/json" },
             body: JSON.stringify(data),

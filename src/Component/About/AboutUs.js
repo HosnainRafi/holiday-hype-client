@@ -1,5 +1,6 @@
 import React from 'react';
 import './AboutUs.css'
+import img from '../../images/travel.jfif'
 
 const AboutUs = () => {
     return (
@@ -28,7 +29,7 @@ const AboutUs = () => {
                         Enthusiastically mesh long-term high-impact infrastructures vis-a-vis efficient customer service. Professionally fashion wireless leadership rather than prospective experiences.
                     </p>
                 </div>
-                <div className="col-md-6"></div>
+            <div className="col-md-6 container-fluid"><img src={img} width="80%" alt="" /></div>
             </div>
 
         </div>
