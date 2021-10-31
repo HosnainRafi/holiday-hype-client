@@ -59,6 +59,9 @@ const ManageOrder = () => {
             .then(data => {
                 console.log(data);
                 data.status = status;
+                if (data.modifiedCount> 0) {
+                    swal("Congratulations!", "Your Order is Approved", "success");
+                }
             })
     }
 
