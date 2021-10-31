@@ -61,7 +61,7 @@ const ContactUs = () => {
                         <div>
                             <textarea placeholder="Type Your Problem" name="instruction" id="" cols="40" rows="4"></textarea>
                         </div>
-                    <button class="w-25 btn btn-lg btn-primary mb-4" type="submit">Submit </button>
+                    <button class=" btn btn-lg btn-primary mb-4" type="submit">Submit </button>
                 </div>
             </div>
         </div >
