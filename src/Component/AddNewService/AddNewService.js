@@ -4,7 +4,7 @@ import swal from 'sweetalert';
 import { useHistory} from 'react-router';
 
 const AddNewService = () => {
-    const history = useHistory()
+    const history = useHistory();
 
     const { register, handleSubmit,reset } = useForm();
     const onSubmit = data => {

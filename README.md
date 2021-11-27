@@ -6,12 +6,11 @@
 Used: [React](http://www.react.com/ ) ,  [Bootstrap](http://getbootstrap.com) , [Material Ui](http://mui.com) , [Firebase](http://firebase.com)
 <br/>
 * Feature of the projects:
-    * Fully Responsive
-    * Faster than any Website
+    * Implemented React Router with user dashboard and CRUD operation.
+    * Executed Authentication System with Firebase.
+    * Conducted backend data from Heroku to UI.
     * Awesome Design
     * Private Router
-    * Login System
-    * Backend Server Connected
 
 
 * About the Projects
